@@ -26,6 +26,7 @@ spec:
       enabled: true
       className: nginx
   driftDetection:
+    mode: enabled
     ignore:
      - target:
          kind: Deployment
