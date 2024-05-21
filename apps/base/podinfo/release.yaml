@@ -31,4 +31,5 @@ spec:
      - target:
          kind: Deployment
        paths:
-       - '/spec/template/spec/containers[*]/resources/requests/cpu'
+       - '/spec/template/spec/containers/0/resources/requests/cpu'
+       - '/spec/template/spec/containers/1/resources/requests/cpu'
