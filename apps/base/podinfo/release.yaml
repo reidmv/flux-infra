@@ -25,3 +25,9 @@ spec:
     ingress:
       enabled: true
       className: nginx
+  driftDetection:
+    ignore:
+     - target:
+         kind: Deployment
+       paths:
+       - '/spec/template/spec/containers[*]/resources/requests/cpu'
