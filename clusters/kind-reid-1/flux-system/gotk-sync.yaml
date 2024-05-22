@@ -19,7 +19,7 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 0m20s
   path: ./clusters/kind-reid-1
   prune: true
   sourceRef:
