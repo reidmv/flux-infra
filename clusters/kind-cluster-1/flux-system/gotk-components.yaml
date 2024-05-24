@@ -6407,7 +6407,6 @@ metadata:
   name: kustomize-controller
   namespace: flux-system
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: kustomize-controller
