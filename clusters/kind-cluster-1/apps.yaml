@@ -16,12 +16,12 @@ spec:
   prune: true
   wait: true
   timeout: 5m0s
-  driftDetection:
-    ignore:
-     - target:
-         kind: Deployment
-       paths:
-       - '/spec/template/spec/containers/0/resources'
-       - '/spec/template/spec/containers/1/resources'
-       - '/spec/template/spec/containers/2/resources'
-       - '/spec/template/spec/containers/3/resources'
+# driftDetection:
+#   ignore:
+#    - target:
+#        kind: Deployment
+#      paths:
+#      - '/spec/template/spec/containers/0/resources'
+#      - '/spec/template/spec/containers/1/resources'
+#      - '/spec/template/spec/containers/2/resources'
+#      - '/spec/template/spec/containers/3/resources'
