@@ -18,6 +18,10 @@ spec:
   # Default values
   # https://github.com/stefanprodan/podinfo/blob/master/charts/podinfo/values.yaml
   values:
+    resources:
+      requests:
+        cpu: 16m
+        memory: 32Mi
     redis:
       enabled: true
       repository: public.ecr.aws/docker/library/redis
