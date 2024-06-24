@@ -2,5 +2,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: podinfo
+  annotations:
+    live.stormforge.io/auto-deploy: "true"
+    live.stormforge.io/patch-target: "@self"
   labels:
     toolkit.fluxcd.io/tenant: dev-team

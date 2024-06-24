@@ -1,0 +1,22 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: podinfo
+  labels:
+    app.kubernetes.io/name: podinfo
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: podinfo
+  cooldownPeriod: 60
+  minReplicaCount: 1
+  maxReplicaCount: 2
+  fallback: # Fallback strategy when metrics are unavailable for the apps
+    failureThreshold: 3 
+    replicas: 1 #Keep this desired state when metrics are unavailable.
+  triggers:
+    - type: cpu 
+      metadata:
+        type: Utilization
+        value: "80"
