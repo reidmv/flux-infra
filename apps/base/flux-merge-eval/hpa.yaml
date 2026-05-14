@@ -4,7 +4,7 @@ metadata:
   name: eval-hpa
   namespace: flux-merge-eval
   annotations:
-    kustomize.toolkit.fluxcd.io/ssa: Merge
+    kustomize.toolkit.fluxcd.io/ssa: Ignore
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
