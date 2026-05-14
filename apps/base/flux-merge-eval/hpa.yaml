@@ -4,14 +4,14 @@ metadata:
   name: eval-hpa
   namespace: flux-merge-eval
   annotations:
-    kustomize.toolkit.fluxcd.io/ssa: Ignore
+    kustomize.toolkit.fluxcd.io/ssa: Merge
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: eval-target
   minReplicas: 1
-  maxReplicas: 10
+  maxReplicas: 5
   metrics:
     - type: Resource
       resource:
