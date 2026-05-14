@@ -3,8 +3,6 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: eval-hpa
   namespace: flux-merge-eval
-  annotations:
-    kustomize.toolkit.fluxcd.io/ssa: Merge
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
