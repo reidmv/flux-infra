@@ -18,6 +18,4 @@ spec:
     - paths:
         - "/spec/metrics"
       target:
-        group: autoscaling
-        version: v2
         kind: HorizontalPodAutoscaler
