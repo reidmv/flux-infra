@@ -7,8 +7,6 @@ metadata:
 spec:
   force: true
   interval: 0m20s
-  #dependsOn:
-  #  - name: infra-configs
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -16,12 +14,10 @@ spec:
   prune: true
   wait: true
   timeout: 5m0s
-# driftDetection:
-#   ignore:
-#    - target:
-#        kind: Deployment
-#      paths:
-#      - '/spec/template/spec/containers/0/resources'
-#      - '/spec/template/spec/containers/1/resources'
-#      - '/spec/template/spec/containers/2/resources'
-#      - '/spec/template/spec/containers/3/resources'
+  driftIgnoreRules:
+    - paths:
+        - "/spec/metrics"
+      target:
+        group: autoscaling
+        version: v2
+        kind: HorizontalPodAutoscaler
